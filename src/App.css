@@ -1,10 +1,9 @@
 /* App.css */
 .telegram-app {
   font-family: "Roboto", sans-serif;
-  background-color: #f5f8fa;
   color: #000;
   margin: 0 auto;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   overflow: hidden;
 }
 

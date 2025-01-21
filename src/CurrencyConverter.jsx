@@ -26,9 +26,9 @@ const CurrencyConverter = () => {
 
   const calculateRate = (data, from, to) => {
     if (from === "RUB") return 1 / data.Valute[to]?.Value;
-    if (to === "RUB") return data.Valute[from]?.Value;
+    if (to === "RUB") return data.Valute[from]?.Value / data.Valute[from]?.Nominal;
     return (
-      data.Valute[from]?.Value / data.Valute[to]?.Value || null
+      (data.Valute[from]?.Value / data.Valute[from]?.Nominal) / (data.Valute[to]?.Value / data.Valute[to]?.Nominal) || null
     );
   };
 
