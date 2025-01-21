@@ -25,7 +25,7 @@ const CurrencyRates = () => {
               <span className="rate-currency">{key}</span>
               <span className="rate-name">{value.Name}</span>
             </div>
-            <span className="rate-value">{value.Value.toFixed(2)} ₽</span>
+            <span className="rate-value">{(value.Value / value.Nominal).toFixed(2)} ₽</span>
           </li>
         ))}
       </ul>
